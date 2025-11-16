@@ -16,7 +16,7 @@ const Index = () => {
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-              Encontre seu lar acessível
+              Encontre seu lar acessível agora
             </h1>
             <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-5 duration-1000 delay-150">
               Conectamos jovens de baixa renda a moradias dentro do orçamento e auxílios habitacionais
