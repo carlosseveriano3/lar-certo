@@ -1,10 +1,15 @@
+import { useNavigate } from "react-router-dom";
+import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Home, CheckCircle, FileText, Shield, TrendingUp, Users } from "lucide-react";
 
 const Index = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background">
+      <Header />
+      
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-secondary py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.5))]" />
@@ -17,10 +22,20 @@ const Index = () => {
               Conectamos jovens de baixa renda a moradias dentro do orçamento e auxílios habitacionais
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-300">
-              <Button size="lg" variant="secondary" className="text-lg px-8 hover:scale-105 transition-transform">
+              <Button 
+                size="lg" 
+                variant="secondary" 
+                className="text-lg px-8 hover:scale-105 transition-transform"
+                onClick={() => navigate('/dashboard')}
+              >
                 Encontrar Moradia
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 border-white text-white hover:bg-white hover:text-primary hover:scale-105 transition-all">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-lg px-8 bg-white/10 border-white text-white hover:bg-white hover:text-primary hover:scale-105 transition-all"
+                onClick={() => navigate('/dashboard')}
+              >
                 Anunciar Imóvel
               </Button>
             </div>
@@ -138,7 +153,11 @@ const Index = () => {
           <p className="text-lg text-muted-foreground mb-8">
             Junte-se a milhares de jovens que já encontraram moradia acessível através da nossa plataforma
           </p>
-          <Button size="lg" className="text-lg px-8 hover:scale-105 transition-transform">
+          <Button 
+            size="lg" 
+            className="text-lg px-8 hover:scale-105 transition-transform"
+            onClick={() => navigate('/dashboard')}
+          >
             Começar Agora
           </Button>
         </div>
